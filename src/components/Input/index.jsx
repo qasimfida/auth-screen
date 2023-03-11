@@ -9,15 +9,13 @@ const Input = ({
 	register,
 	...rest
 }) => {
-	let inpCls = `form-input block py-2 px-3 border border-gray-300 rounded-md 
-    shadow-sm focus:outline-none focus:shadow-outline-blue focus:border-blue-300 
-    focus:ring focus:ring-blue-100 ease-in-out sm:text-sm sm:leading-5 w-full ${
-			error ? "border border-red-500" : ""
-		} ${className}`;
-	let checkBoxCls = `app__checkbox shrink-0 appearance-none select-none bg-white h-4 w-4 text-indigo-600 transition duration-150 ease-in-out cursor-pointer border rounded ${
+	let inpCls = `block w-full px-3 py-2 ease-in-out border border-gray-300 rounded-md shadow-sm form-input focus:outline-none focus:shadow-outline-blue focus:border-blue-300 focus:ring focus:ring-blue-100 sm:text-sm sm:leading-5 ${
+		error ? "border border-red-500" : ""
+	} ${className}`;
+	let checkBoxCls = `w-4 h-4 text-indigo-600 transition duration-150 ease-in-out bg-white border rounded appearance-none cursor-pointer select-none app__checkbox shrink-0 focus:shadow-checked checked:border-transparent ${
 		error ? "border-red-500" : ""
 	} ${className}`;
-	let labelCls = `block text-sm font-medium leading-5 mb-1 text-gray-700 ${labelClass}`;
+	let labelCls = `block mb-1 text-sm font-medium leading-5 text-gray-700 ${labelClass}`;
 	if (type === "checkbox")
 		return (
 			<div className="relative flex items-start">
@@ -33,7 +31,7 @@ const Input = ({
 					<label htmlFor={name} className="font-medium text-gray-700">
 						{label}
 					</label>
-					{error && <div className="text-xs text-red-500 mt-1">{error}</div>}
+					{error && <div className="mt-1 text-xs text-red-500">{error}</div>}
 				</div>
 			</div>
 		);
@@ -52,7 +50,7 @@ const Input = ({
 					{...register}
 					{...rest}
 				/>
-				{error && <div className="text-xs text-red-500 mt-1">{error}</div>}
+				{error && <div className="mt-1 text-xs text-red-500">{error}</div>}
 			</div>
 		</>
 	);

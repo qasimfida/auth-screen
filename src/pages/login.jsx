@@ -28,7 +28,7 @@ const Login = () => {
 		>
 			<form
 				onSubmit={handleSubmit(onSubmit)}
-				className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10"
+				className="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10"
 			>
 				<div>
 					<Input
@@ -60,11 +60,11 @@ const Login = () => {
 						error={errors?.password?.message}
 					/>
 				</div>
-				<div className="mt-2 flex items-center justify-end">
+				<div className="flex items-center justify-end mt-2">
 					<div className="text-sm leading-5">
 						<Link
 							to="/ResetPassword"
-							className="font-medium text-indigo-600 hover:text-indigo-500 focus:outline-none focus:underline transition ease-in-out duration-150"
+							className="font-medium text-indigo-600 transition duration-150 ease-in-out hover:text-indigo-500 focus:outline-none focus:underline"
 						>
 							Esqueceu a senha?
 						</Link>

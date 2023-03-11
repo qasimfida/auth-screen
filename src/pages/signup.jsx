@@ -30,7 +30,7 @@ const SignUp = () => {
 		>
 			<form
 				onSubmit={handleSubmit(onSubmit)}
-				className="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10"
+				className="px-4 py-8 bg-white shadow sm:rounded-lg sm:px-10"
 			>
 				<div>
 					<Input
