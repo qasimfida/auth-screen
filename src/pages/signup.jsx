@@ -1,7 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import Logo from "../assets/green-logo.png";
 import AuthLayout from "../components/AuthLayout";
 import Button from "../components/Button";
 import Input from "../components/Input";
