@@ -14,6 +14,9 @@ const Input = ({
     focus:ring focus:ring-blue-100 ease-in-out sm:text-sm sm:leading-5 w-full ${
 			error ? "border border-red-500" : ""
 		} ${className}`;
+	let checkBoxCls = `app__checkbox shrink-0 appearance-none select-none bg-white h-4 w-4 text-indigo-600 transition duration-150 ease-in-out cursor-pointer border rounded ${
+		error ? "border-red-500" : ""
+	} ${className}`;
 	let labelCls = `block text-sm font-medium leading-5 mb-1 text-gray-700 ${labelClass}`;
 	if (type === "checkbox")
 		return (
@@ -21,7 +24,7 @@ const Input = ({
 				<div className="flex items-center h-5">
 					<input
 						type="checkbox"
-						className="form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out cursor-pointer border-red-500"
+						className={checkBoxCls}
 						{...rest}
 						{...register}
 					/>
